@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="min-h-screen"
+        style="background-image: url('img/wheather-bg.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+        <section class="container h-96 mx-auto flex flex-wrap content-center justify-center">
+
+            <div class="w-full flex flex-wrap content-center justify-center">
+                <input id="searchValue" type="text" class="w-6/12 p-4 rounded focus:outline-none " value="">
+                <button id="searchBtn" type="submit"
+                    class="bg-purple-400 px-4 text-white font-bold uppercase">Search</button>
+            </div>
+            <!-- <div id="loading"></div> -->
+
+        </section>
+
+
+        <section class="container mx-auto">
+            <div class="grid grid-cols-1 gap-4">
+                <div class="bg-white h-96 flex flex-col justify-center rounded-2xl">
+                    <img src="img/sunny-wheather.png" alt="" class="w-50 object-none">
+                    <div class="flex justify-evenly p-4">
+                        <h3 id="city-name" class="text-3xl font-bold">Dhaka</h3>
+                        <div id="loading"></div>
+                        <h3 class="text-3xl font-bold"><span id="temparature">12</span><sup>0</sup>C</h3>
+                    </div>
+                </div>
+                <!-- <div class="bg-green-200"><img src="https://via.placeholder.com/150" alt=""></div>
+                <div class="bg-green-600"><img src="https://via.placeholder.com/150" alt=""></div> -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/weatherapi.js"></script>
+</body>
+
+</html>
